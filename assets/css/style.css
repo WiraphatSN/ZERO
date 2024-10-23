@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: "Kanit", Arial;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+    .team {
+        color: white;
+        background-color: #121212;
+    }
+}
+
+.light-mode {
+    background-color: white;
+    color: #121212;
+    .team {
+        color: #121212;
+        background-color: white;
+    }
+}
+
+
+
+#copySec {
+    opacity: 0; /* เริ่มต้นด้วยความโปร่งใส */
+    visibility: hidden; /* ซ่อน div */
+    width: 10rem;
+    height: 2rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    background-color: #000000;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* ใช้ตำแหน่ง fixed */
+    top: 5%; /* อยู่กลางหน้าจอ */
+    left: 50%; /* อยู่กลางหน้าจอ */
+    transform: translate(-50%, -50%); /* ปรับให้กลางจอ */
+    transition: opacity 0.3s ease, visibility 0.5s ease; /* เพิ่ม transition */
+}
+
+#copySec.show {
+    opacity: 0.6; /* แสดง div */
+    visibility: visible; /* ทำให้สามารถเห็นได้ */
+}
+
+
+
+nav {
+    padding: 3rem;
+    top: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    .btn {
+        display: flex;
+    }
+}
+
+nav .menu a, nav .btn a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    font-size: large;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+nav .menu a:hover {
+    border-radius: 0.5rem;
+    background-color: #1d83f1;
+}
+
+nav .menu .now {
+    background-color: #2e93ff;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+nav .menu .now:hover {
+    background-color: #1d83f1;
+    border-radius: 0.5rem;
+}
+
+nav .btn .store, nav .btn .copy {
+    i {
+        padding-right: 0.5rem;
+    }
+}
+
+nav .btn .store {
+    a {
+        background-color: #ffb53e;
+    }
+}
+
+nav .btn .store:hover {
+    a {
+        background-color: #e7a63d;
+    }
+}
+
+nav .btn .discord {
+    a {
+        margin-left: 13rem;
+        background-color: #3e54ff;
+    }
+}
+
+nav .btn .discord:hover {
+    a {
+        background-color: #3348e7;
+    }
+}
+
+nav .btn .copy {
+    a {
+        background-color: #2e93ff;
+    }
+}
+
+nav .btn .copy:hover {
+    a {
+        background-color: #2781e2;
+    }
+}
+
+
+
+.content {
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดเนื้อหาให้อยู่ตรงกลางในแนวนอน */
+    .first {
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 1rem 3rem 1rem 3rem;
+        border-radius: 1rem;
+        letter-spacing: 0.3rem;
+        transition: all 0.3s ease;
+        h1 {
+            transition: all 0.3s ease;
+        }
+        h1:hover {
+            color: #ccc;
+        }
+        .copy {
+            border-top: #ccc solid 0.1rem;
+            cursor: pointer;
+            a {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5rem;
+                letter-spacing: 0.4rem;
+                color: #75a8ff;
+                transition: all 0.3s ease;
+            }
+            a:hover {
+                color: #a6c7ff;
+            }
+            span {
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+                color: #e8f0ff;
+            }
+        }
+    }
+    .sec {
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 0.5rem 6rem 0.5rem 6rem;
+        margin-top: 0.5rem;
+        border-radius: 1rem;
+        a {
+            color: white;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .social {
+        padding-top: 1.4rem;
+        display: flex;
+        justify-content: center;
+        img {
+            height: auto;
+            width: 10rem;
+            padding: 0 0.5rem 0 0.5rem;
+        }
+    }
+}
+
+.team {
+    margin-top: 11%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดเนื้อหาให้อยู่ตรงกลางในแนวนอน */
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 0.8rem;
+    background-color: #121212;
+    width: 100%;
+    min-height: 28rem; /* ใช้ min-height แทน height */
+    h1 {
+        padding: 4rem;
+    }
+    .list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* ทำให้รายการยืดหยุ่นตามขนาดจอ */
+        gap: 20px; /* ระยะห่างระหว่างไอเทม */
+        img {
+            padding: 2rem 2rem 0 2rem;
+            max-height: 18rem;
+            max-width: 18rem;
+            border-radius: 20%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        img:hover {
+            opacity: 0.8;
+        }
+        a {
+            cursor: pointer;
+            flex-direction: column;
+        }
+        span {
+            font-size: medium;
+            display: block;
+            letter-spacing: 0.2rem;
+        }
+    }
+}
+
+footer {
+    border-bottom: #1d83f1 solid 1rem;
+    margin-top: 15%;
+    display: flex;
+    padding: 2rem 10rem 2rem 10rem;
+    border-radius: 1rem;
+    background-color: #2e93ff;
+    color: #fff;
+    margin-bottom: 3rem;
+    img {
+        width: 12rem;
+        height: auto;
+    }
+    .icons {
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+        .copy {
+            i {
+            margin-left: 0;
+            }
+        }
+        a {
+            color: white;
+            cursor: pointer;
+            background-color: #1d83f1;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            border-radius: 0.4rem;
+            font-size: larger;
+            margin-left: 1rem;
+            transition: all 0.3s ease;
+        }
+        i {
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            margin-left: 0;
+        }
+        a:hover {
+            background-color: #106fd4;
+        }
+    }
+    .text {
+        padding: 2rem 0 2rem 2rem;
+        display: block;
+        text-align: start;
+        font-size: large;
+    }
+}
