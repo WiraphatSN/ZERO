@@ -20,6 +20,7 @@ function lightMode() {
 }
 
 
+
 // Smooth Scroll
 SmoothScroll({
     speed: 10,
@@ -29,8 +30,6 @@ SmoothScroll({
     updateURL: true,
     popstate: true
   });
-
-
 
 new PlayerCounter({
     element: element,

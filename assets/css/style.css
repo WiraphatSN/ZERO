@@ -309,3 +309,62 @@ footer {
         font-size: large;
     }
 }
+
+
+
+
+
+
+@media screen and (max-width: 820px) {
+    nav .menu, nav .btn {
+        display: grid;
+        flex-direction: column;
+    }
+    nav .btn .store {
+        margin-top: 2rem;
+    }
+    nav .btn .discord {
+        a {
+            margin-left: 1rem;
+            background-color: #3e54ff;
+        }
+    }
+    nav .btn .copy {
+        a {
+            padding: 0.8rem 1rem 0.8rem 1rem;
+        }
+        i {
+            display: none;
+        }
+    }
+    .social {
+        display: grid;
+        flex-direction: column;
+    }
+    footer {
+        display: grid;
+        flex-direction: column;
+        max-width: 90%;
+        padding: 1rem;
+    }
+    footer img {
+        display: none;
+    }
+    footer .copy {
+        display: none;
+    }
+    footer p {
+        max-width: 90%;
+        display: grid;
+        flex-direction: column;
+        margin-left: 0;
+        font-size: small;
+    }
+    footer .text {
+        padding: 2rem 0 2rem 2rem;
+        display: grid;
+        flex-direction: column;
+        text-align: start;
+        font-size: large;
+    }
+}
